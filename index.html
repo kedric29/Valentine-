@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Valentine 💘</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- animated emoji background -->
+  <div id="emoji-bg" aria-hidden="true"></div>
+
+<!-- LOGIN FORM -->
+<div class="box" id="login-card">
+  <h2>💘 Valentine Login 💘</h2>
+  <p>Enter your lover's name and phone to continue:</p>
+  <input type="text" id="lover-name" placeholder="Your lover's name" maxlength="50">
+  <input type="tel" id="lover-phone" placeholder="Lover's phone (include country code, e.g. +2547...)" maxlength="30">
+  <button id="login-btn" class="btn-submit">Enter ❤️</button>
+</div>
+
+<div class="box" id="card" style="display:none;">
+  <h2 id="question">Would you be my Valentine? 💖</h2>
+  <p id="why"></p>
+
+  <div class="btns">
+    <button id="yes">Yes ❤️</button>
+    <button id="no">No 💔</button>
+  </div>
+
+  <div class="pics" id="pics">
+    <img src="" alt="">
+    <img src="" alt="">
+  </div>
+</div>
+
+  <!-- kissing overlay (hidden, shown when Yes pressed) -->
+  <div id="kiss-overlay" class="hidden" aria-hidden="true">
+    <div class="kiss-scene" role="dialog" aria-label="Kissing animation">
+      <span class="left-emoji">😘</span>
+      <span class="right-emoji">😍</span>
+      <div class="hearts" aria-hidden="true"></div>
+      <div class="kiss-text" aria-hidden="true"></div>
+    </div>
+  </div>
+
+<!-- Love message display -->
+<div id="love-message" class="box love-message-box hidden">
+  <h1 id="love-text">I Love You 💕</h1>
+  <p id="lover-display"></p>
+  <div style="display:flex;gap:8px;justify-content:center;margin-top:12px;">
+    <button id="gift-btn" class="btn-submit">Send Gift 🎁</button>
+    <button id="again-btn" class="btn-submit">Again 💞</button>
+  </div>
+</div>
+
+<!-- Gift modal -->
+<div id="gift-modal" class="hidden modal" aria-hidden="true">
+  <div class="modal-content">
+    <h3>Choose a gift 🎁</h3>
+    <div class="gift-options">
+      <button class="gift-option" data-gift="chocolate">Chocolate Box</button>
+      <button class="gift-option" data-gift="flowers">Red Roses</button>
+      <button class="gift-option" data-gift="teddy">Teddy Bear</button>
+      <button class="gift-option" data-gift="ring">Promise Ring</button>
+      <button class="gift-option" data-gift="card">Handwritten Card</button>
+    </div>
+    <textarea id="gift-note" placeholder="Add a short note (optional)" rows="3"></textarea>
+    <div class="modal-actions">
+      <button id="send-gift-btn" class="btn-submit">Send Gift</button>
+      <button id="close-gift" class="btn-secondary">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script> 
+</body>
+</html>

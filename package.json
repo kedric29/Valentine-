@@ -1,0 +1,16 @@
+{
+  "name": "valentine-app",
+  "version": "1.0.0",
+  "description": "Valentine's Day Love Message App",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["valentine", "love", "message"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "twilio": "^4.0.0"
+  }
+}
